@@ -17,7 +17,6 @@ import {
 } from "../../user/action/action";
 
 function* handle_get_user(action) {
-  // console.log(action, "action from manage");
   try {
     let { data, status } = yield call(get_user, action);
     if (status == 200) {
@@ -31,11 +30,9 @@ function* handle_get_user(action) {
 }
 
 function* handle_post_user(action) {
-  console.log(action, "action manage file");
 
   try {
     let { data, status } = yield call(post_user, action);
-    console.log(data, status, "this is from post manage");
     if (status == 201 || status == 200) {
       yield put({ type: POST_USER_SUCCESS, data });
     } else {
@@ -47,7 +44,6 @@ function* handle_post_user(action) {
 }
 
 function* handle_delete_user(action) {
-  console.log(action, "action from manage");
   try {
     let { data, status } = yield call(delete_user, action);
 
@@ -64,7 +60,6 @@ function* handle_delete_user(action) {
 function* handle_update_user(action) {
   try {
     let { data, status } = yield call(update_user, action);
-    // console.log(res);
 
     if (status == 200) {
       yield put({ type: UPDATE_USER_SUCCESS, data });

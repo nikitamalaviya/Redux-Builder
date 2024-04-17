@@ -7,7 +7,7 @@ export let GET_USER = "/users";
 export let POST_USER = "/users";
 
 //delete user
-export let DELETE_USER = "/users/"; //+id
+export let DELETE_USER = "/users/";
 
 //update user
-export let PUT_USER = "/users/"; //+id
+export let PUT_USER = "/users/";
